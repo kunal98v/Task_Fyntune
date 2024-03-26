@@ -24,7 +24,7 @@ class UserDataController extends Controller
         $rules = [
             'name' => 'required|string',
             'email'=> 'required|email',
-            'mobile' => 'required|numeric|min:10'
+            'mobile' => 'required|numeric|digits:10'
         ];
 
         $validator = Validator::make($request->all(), $rules);
